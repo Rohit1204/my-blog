@@ -4,6 +4,23 @@ from django.utils import timezone
 from .forms import PostForm
 
 
+def SearchResultsView(request):
+    if request.method == 'GET':
+        query= request.GET.get('q')
+        if query is not None:
+            lookups= Q(title__icontains=query) | Q(content__icontains=query)
+            lookups1= Q(title__icontains=query) | Q(url_link__icontains=query) | Q(place__icontains=query)
+
+            results= object_list = ExploreBlog.objects.filter(lookups).distinct()
+    
+
+            context={'explore_blog': results,'search_result':query}
+            return render(request, 'home.html', context)
+        else:
+            return render(request, 'home.html')
+    else:
+        return render(request, 'home.html')
+
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})

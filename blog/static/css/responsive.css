@@ -1,0 +1,108 @@
+@media only screen and (max-width: 600px){
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .navigation ul{
+        display: block;
+        width: 90%;
+    }    
+
+    ion-icon{
+        display:none;
+
+    }
+    span {
+        font-size: 12px;
+    }
+    .modal button, .modal input, .modal button, .modal a{
+        width: 75%;
+        margin: auto;
+        font-size: 12px!important;
+    }
+    
+    .mobile{
+        display: inline;
+    }
+    .mobile-login{
+        display: none;
+    }
+    .img- {
+        width: 100%;
+        margin: auto;
+    }
+    .img-h5 {
+        font-size: 14px!important;
+        color: #333;
+
+    }
+    .explore-header{
+        text-align: center;
+    }   
+    .alert{
+        width:100%;
+        text-align: center;
+        font-size: 14px!important;
+    }   
+    .your-saved, .explore-header {
+        width: 100%;
+        margin: auto;
+        margin-top: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 3px;
+        font-family: 'Oswald', sans-serif;
+        font-family: 'Source Serif Pro', serif;
+        font-size: 14px!important;
+        color: #333;
+        border-bottom: 1px solid lightgray;
+        text-align: center;
+        z-index: 1;
+    }
+    .explore-header{
+        background-color: #fff;
+    }
+    #nav-under-drop{
+        display: none;
+    }
+    #nav-outer-drop{
+        display: contents;
+    }
+    nav .avatar {
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+    .auth-box input {
+        display: block;
+        width: 65%;
+        margin: auto;
+        padding: 8px;
+        border-radius: 3px;
+        outline: none;
+        border: 1px solid;
+        font-family: 'Oswald', sans-serif!important;
+        font-size: 14px!important;
+        margin-bottom: 20px;
+    }
+
+    .navbar{
+        padding:12px;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+}    
