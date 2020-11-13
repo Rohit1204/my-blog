@@ -9,7 +9,7 @@ def SearchResultsView(request):
         query= request.GET.get('q')
         if query is not None:
             lookups= Q(title__icontains=query) | Q(text__icontains=query)
-            lookups1= Q(title__icontains=query) | Q(url_link__icontains=query) | Q(place__icontains=query)
+            lookups1= Q(title__icontains=query) | Q(author__icontains=query) | Q(place__icontains=query)
 
             results= object_list = ExploreBlog.objects.filter(lookups).distinct()
     
